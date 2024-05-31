@@ -1,3 +1,75 @@
+# Jest React Test
+
+![Next.js Logo](https://nextjs.org/static/favicon.ico)
+
+![Jest](https://raw.githubusercontent.com/vercel/next.js/main/examples/jest/vercel.svg)
+
+## Overview
+
+This project is an example of using [Jest](https://jestjs.io/) with [Next.js](https://nextjs.org/).
+
+## WelcomeMessage
+
+This is a simple component that produces a simple message.
+
+```jsx
+export default function WelcomeMessage({ message }) {
+  return <h1>{message}</h1>;
+}
+```
+
+## WelcomeMessage Test
+
+```jsx
+import { render } from "@testing-library/react";
+
+import WelcomeMessage from "./WelcomeMessage";
+
+describe("WelcomeMessage", () => {
+  it("should render a welcome message", () => {
+    const { getByText } = render(<WelcomeMessage message="Hello, Jest!" />);
+
+    expect(getByText("Hello, Jest!")).toBeInTheDocument();
+  });
+});
+```
+
+## ToggleText
+
+This is a simple component that produces a simple message.
+
+```jsx
+export default function ToggleText({ text }) {
+  return <h1>{text}</h1>;
+}
+```
+
+## ToggleText Test
+
+```jsx
+import { render } from "@testing-library/react";
+import ToggleText from "./ToggleText";
+
+describe("ToggleText", () => {
+  it("should render a welcome message", () => {
+    const { getByText } = render(<ToggleText text="Hello, Jest!" />);
+    expect(getByText("Hello, Jest!")).toBeInTheDocument();
+  });
+});
+```
+
+## Conclusion
+
+Congratulations! You have successfully created a [Jest](https://jestjs.io/) project with [Next.js](https://nextjs.org/).
+
+## Next Steps
+
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+## Contributing
+
+If you'd like to contribute to this project, please see our [Contributing](https://github.com/vercel/next.js/tree/canary/examples/jest) section.
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
